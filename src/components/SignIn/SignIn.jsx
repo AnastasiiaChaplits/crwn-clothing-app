@@ -2,6 +2,8 @@ import { Component } from "react";
 import { FormInput, CustomButton } from "../index";
 import "./styles.scss";
 
+import { signInWithGoogle } from "../../firebase/utils";
+
 class SignIn extends Component {
   constructor(props) {
     super(props);
@@ -45,7 +47,12 @@ class SignIn extends Component {
             required
             handleChange={this.handleChange}
           />
-          <CustomButton type="submit">Sign in</CustomButton>
+          <div className="buttons">
+            <CustomButton type="submit">Sign in</CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign in with Google
+            </CustomButton>
+          </div>
         </form>
       </div>
     );
