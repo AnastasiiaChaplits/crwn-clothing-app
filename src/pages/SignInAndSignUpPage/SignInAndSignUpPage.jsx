@@ -1,9 +1,10 @@
 import "./styles.scss";
-import { SignIn } from "../../components";
+import { SignIn, SignUp } from "../../components";
 
 const SignInAndSignUpPage = () => (
   <div className="sign-in-and-sign-up">
     <SignIn />
+    <SignUp />
   </div>
 );
 
