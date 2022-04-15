@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import "./App.css";
-import { HomePage, ShopPage, SignInAndSignUpPage } from "./pages";
+import { HomePage, ShopPage, SignInAndSignUpPage, CheckoutPage } from "./pages";
 import { Header } from "./components";
 import { auth } from "./firebase/utils";
 import { createUserProfileDocument } from "./firebase/utils";
@@ -43,6 +43,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
+          <Route exact path="/checkout" component={CheckoutPage} />
           <Route
             exact
             path="/signin"
