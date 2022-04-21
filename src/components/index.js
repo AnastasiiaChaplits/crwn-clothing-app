@@ -11,6 +11,5 @@ export { default as CartIcon } from "./CartIcon/CartIcon";
 export { default as CardDropdown } from "./CartDropdown/CartDropdown";
 export { default as CartItem } from "./CartItem/CartItem";
 export { default as CheckoutItem } from "./CheckoutItem/CheckoutItem";
-export { default as CollectionsOverview } from "./CollectionsOverview/CollectionsOverview";
 export { default as StripeButton } from "./StripeButton/StripeButton";
 export { default as withSpinner } from "./withSpinner/withSpinner";
