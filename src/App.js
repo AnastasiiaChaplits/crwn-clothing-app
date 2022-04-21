@@ -5,7 +5,6 @@ import { createStructuredSelector } from "reselect";
 import "./App.css";
 import { HomePage, ShopPage, SignInAndSignUpPage, CheckoutPage } from "./pages";
 import { Header } from "./components";
-import { setCurrentUser } from "./redux/user/userActions";
 import { selectCurrentUser } from "./redux/user/userSelector";
 
 const App = ({ currentUser }) => {
@@ -32,8 +31,4 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);
