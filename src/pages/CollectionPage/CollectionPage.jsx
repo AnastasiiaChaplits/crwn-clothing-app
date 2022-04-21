@@ -9,19 +9,17 @@ import {
 } from "./styled";
 
 const CollectionPage = ({ collection }) => {
-  if (collection) {
-    const { title, items } = collection;
-    return (
-      <CollectionPageContainer>
-        <CollectionTitle>{title}</CollectionTitle>
-        <CollectionItemsContainer>
-          {items.map((item) => (
-            <CollectionItem key={item.id} item={item} />
-          ))}
-        </CollectionItemsContainer>
-      </CollectionPageContainer>
-    );
-  }
+  const { title, items } = collection;
+  return (
+    <CollectionPageContainer>
+      <CollectionTitle>{title}</CollectionTitle>
+      <CollectionItemsContainer>
+        {items.map((item) => (
+          <CollectionItem key={item.id} item={item} />
+        ))}
+      </CollectionItemsContainer>
+    </CollectionPageContainer>
+  );
 };
 
 const mapStateToProps = (state, ownProps) => ({
