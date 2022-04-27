@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { connect } from "react-redux";
 
-import { FormInput, CustomButton } from "../index";
+import FormInput from "../FormInput/FormInput";
+import CustomButton, {
+  BUTTON_TYPE_CLASSES,
+} from "../CustomButton/CustomButton";
 import { SignInContainer, SignInTitle, ButtonsBarContainer } from "./styled";
 import {
   googleSignInStart,
@@ -56,7 +59,7 @@ const SignIn = (props) => {
           <CustomButton
             type="button"
             onClick={googleSignInStart}
-            isGoogleSignIn
+            buttonType={BUTTON_TYPE_CLASSES.google}
           >
             Sign in with Google
           </CustomButton>
